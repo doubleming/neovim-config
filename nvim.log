@@ -1,0 +1,63 @@
+WRN 2026-07-11T07:10:23.887 ?.78396    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/n4BtGP/nvim.78396.0
+WRN 2026-07-11T07:10:33.065 ?.80334    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/fZUFcO/nvim.80334.0
+WRN 2026-07-11T07:10:43.053 ?.82440    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/0KK6jV/nvim.82440.0
+WRN 2026-07-11T07:10:47.195 ?.83439    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/WwDEYn/nvim.83439.0
+WRN 2026-07-11T07:10:51.898 ?.84266    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/28HW1t/nvim.84266.0
+WRN 2026-07-11T07:10:56.069 ?.85095    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/jK2Wqa/nvim.85095.0
+WRN 2026-07-11T07:11:00.317 ?.86188    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/WPoxaZ/nvim.86188.0
+WRN 2026-07-11T07:11:06.511 ?.87479    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/rXwJrZ/nvim.87479.0
+WRN 2026-07-11T07:11:10.963 ?.88303    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/p53mv3/nvim.88303.0
+WRN 2026-07-11T07:11:15.048 ?.89129    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/NmMdgJ/nvim.89129.0
+WRN 2026-07-11T07:11:31.226 ?.92690    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/kcxSBA/nvim.92690.0
+WRN 2026-07-11T07:11:35.113 ?.93392    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/bqSPAH/nvim.93392.0
+WRN 2026-07-11T07:11:41.090 ?.94783    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/zRAWmA/nvim.94783.0
+WRN 2026-07-11T07:11:57.187 ?.98176    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/qxGKnt/nvim.98176.0
+WRN 2026-07-11T07:16:00.915 ?.35672    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/aEgtRd/nvim.35672.0
+WRN 2026-07-11T21:01:36.792 ?.10119    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/tclGsS/nvim.10119.0
+WRN 2026-08-02T18:07:48.666 ?.5035     server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/CCZ2px/nvim.5035.0
+WRN 2026-08-02T18:57:42.406 ?.22892    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/TiE0IN/nvim.22892.0
+WRN 2026-08-02T18:58:01.684 ?.26841    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/eMIO3k/nvim.26841.0
+WRN 2026-08-02T18:58:16.197 ?.29909    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/ziKiYx/nvim.29909.0
+WRN 2026-08-02T18:59:02.889 ?.39397    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/lah2Rq/nvim.39397.0
+WRN 2026-08-02T18:59:20.976 ?.43121    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/c7DY7V/nvim.43121.0
+WRN 2026-08-02T18:59:40.613 ?.47765    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/bvEB8x/nvim.47765.0
+WRN 2026-08-02T18:59:47.060 ?.49278    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/8zQnDn/nvim.49278.0
+WRN 2026-08-02T19:00:10.327 ?.57581    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/9euteh/nvim.57581.0
+WRN 2026-08-02T19:00:25.663 ?.64192    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/4KyoJ6/nvim.64192.0
+WRN 2026-08-02T19:01:13.385 ?.88888    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/3T26tb/nvim.88888.0
+WRN 2026-08-02T19:01:44.708 ?.271      server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/Gq0AM9/nvim.271.0
+WRN 2026-08-02T19:02:06.798 ?.6675     server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/MVXdkI/nvim.6675.0
+WRN 2026-08-02T19:02:29.805 ?.14346    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/mEwkf1/nvim.14346.0
+WRN 2026-08-02T19:02:29.816 ?.14348    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/bYnBou/nvim.14348.0
+WRN 2026-08-02T19:14:32.350 ?.15182    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/G2u2wF/nvim.15182.0
+WRN 2026-08-02T19:14:37.678 ?.16206    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/ZIwopY/nvim.16206.0
+WRN 2026-08-02T19:14:43.833 ?.17426    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/DjPgPB/nvim.17426.0
+WRN 2026-08-02T19:14:52.612 ?.19286    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/PQVsmx/nvim.19286.0
+WRN 2026-08-02T19:15:03.147 ?.21554    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/SoUWhS/nvim.21554.0
+WRN 2026-08-02T19:15:07.667 ?.22408    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/7HOzZN/nvim.22408.0
+WRN 2026-08-02T19:15:26.149 ?.26191    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/Fy3RWR/nvim.26191.0
+WRN 2026-08-02T19:15:40.136 ?.29176    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/OoTKhS/nvim.29176.0
+WRN 2026-08-17T09:03:40.676 ?.99458    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/bjAfSW/nvim.99458.0
+WRN 2026-08-17T09:03:43.755 ?.125      server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/WbV4ng/nvim.125.0
+WRN 2026-08-17T09:04:10.171 ?.6163     server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/ViCdPn/nvim.6163.0
+WRN 2026-08-17T09:04:38.856 ?.12038    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/xG4dRv/nvim.12038.0
+WRN 2026-08-17T09:04:54.450 ?.15254    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/y8BwlN/nvim.15254.0
+WRN 2026-08-17T09:05:07.689 ?.17999    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/jT6HJl/nvim.17999.0
+ERR 2026-08-17T09:05:07.805 ?.17999    os_set_cloexec:497: Failed to get flags on descriptor 3: Bad file descriptor
+WRN 2026-08-17T09:06:18.529 ui.17998   tui_stop:658: TUI: timed out waiting for DA1 response
+WRN 2026-08-17T09:08:49.433 ?.63677    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/XTMFkx/nvim.63677.0
+WRN 2026-08-17T09:12:24.583 ?.6269     server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/X6Vgfh/nvim.6269.0
+WRN 2026-08-17T09:12:31.278 ?.7708     server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/Dq2fQg/nvim.7708.0
+WRN 2026-08-17T09:12:37.012 ?.8756     server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/bMhtF7/nvim.8756.0
+WRN 2026-08-17T09:13:04.583 ?.14435    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/Lxcx0w/nvim.14435.0
+WRN 2026-08-17T09:14:20.247 ?.30201    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/jjUIad/nvim.30201.0
+WRN 2026-08-17T09:15:15.388 ?.41721    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/vvRiqD/nvim.41721.0
+WRN 2026-08-17T09:16:01.831 ?.51071    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/CtA9ed/nvim.51071.0
+WRN 2026-08-17T09:16:57.235 ?.63213    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/873gzu/nvim.63213.0
+ERR 2026-08-17T09:16:57.370 ?.63213    os_set_cloexec:497: Failed to get flags on descriptor 3: Bad file descriptor
+WRN 2026-08-17T09:17:15.476 ui.63134   tui_stop:658: TUI: timed out waiting for DA1 response
+WRN 2026-08-17T09:17:17.507 ?.67350    server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/L4m2aC/nvim.67350.0
+ERR 2026-08-17T09:17:17.622 ?.67350    os_set_cloexec:497: Failed to get flags on descriptor 3: Bad file descriptor
+WRN 2026-08-17T09:19:36.493 ui.67349   tui_stop:658: TUI: timed out waiting for DA1 response
+WRN 2026-08-17T09:20:04.261 ?.2847     server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/jMPb3M/nvim.2847.0
+WRN 2026-08-17T09:20:10.420 ?.4121     server_start:197: Failed to start server: operation not permitted: /var/folders/2v/762bmy9n729dg7hjlw1zt1sm0000gn/T/nvim.doubleming/zkSXMT/nvim.4121.0
