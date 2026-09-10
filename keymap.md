@@ -385,3 +385,41 @@
 > Insert 模式下输入停顿约 `debounce=600ms` 后自动出现 inline 灰字推荐。
 > blink.cmp 弹出菜单时（`show_on_completion_menu = false`，默认）不再画 virtual text，避免视觉重叠。
 > 启用 / 关闭当前 buffer 的 auto-trigger：`:Minuet virtualtext toggle`。
+
+---
+
+## 24. 包围编辑（mini.surround，`lua/plugins/mini.lua:90`）
+
+格式：**`sa[motion][id]`** —— motion 必填（`iw` / `aw` / `iW` / `i"` / `ip` …），id 是单字符包围符。
+
+| 快捷键 | 作用 |
+| --- | --- |
+| `saw{` | 给当前 word 加 `{ var }`（around word，带空格） |
+| `saiw{` | 给当前 word 加 `{var}`（inner word，紧贴） |
+| `saiW{` | 给当前 WORD 加 `{WORD}`（含 `_-./` 等符号的大词） |
+| `sai(` | 给内层加 `(`，例如 `func(a)` → `func((a))`（mini.surround 默认带空格平衡括号） |
+| `saip"` | 给段落加 `"` |
+| `saib` | 用 `)` 包围（`b` 是 `)` 别名） |
+| `saiq` | 用 `"` 包围（`q` 是单/双/反引号别名） |
+| `sait` | 给加 HTML/XML 标签，输入 tag 名后回车 |
+| `saif` | 给加函数调用，输入函数名后回车 |
+| `sa?` | 交互输入左右包围符（如 `sa?<{CR>}<CR>` → `{...}`） |
+
+> **删 / 改 / 查：**
+>
+> | 快捷键 | 作用 |
+> | --- | --- |
+> | `sd{` | 删 `{...}` 包围 |
+> | `sr{(` | 把 `{...}` 替换成 `(...)` |
+> | `sf{` | 跳到当前行下一个 `{`（`sF{` 反向） |
+> | `sh{` | 高亮 `{...}` 500ms |
+>
+> **扩展后缀**（仅删/改/查/高亮生效）：`l` = 上一个，`n` = 下一个。
+> 例：`sdl)` 删上一个 `)`；`sdn)` 删下一个 `)`。
+>
+> **count：** `[count1]sa[count2][motion][id]`，`count1` 重复包围符，`count2` 给 motion。
+> 例：`2saiw)` → `((var))`。
+>
+> **可视模式：** 先 `v` 选中 → `sa{` 直接包围选区（无需 motion）。
+>
+> **提示：** 按 `sa` 后 **1 秒** 不按 id 会提示 "Reminder to press output surrounding id"，正常连按即可。需关掉加 `silent = true`。

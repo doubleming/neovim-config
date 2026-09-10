@@ -2,6 +2,16 @@ vim.o.exrc = true
 
 if vim.loader then
 	vim.loader.enable()
+	-- vim.loader's rtp cache is not refreshed inside fast events
+	-- (InsertCharPre, TextChangedI, ...). When the lazy __index
+	-- metamethod in vim/_init_packages.lua triggers
+	-- `require('vim.snippet')` for the first time during one of
+	-- those events, the new loader cannot find the module and
+	-- blink.cmp's snippet.active() handler throws
+	-- "module 'vim.snippet' not found". Force the require here
+	-- (outside any fast event) so it is cached in package.loaded
+	-- before blink.cmp's autocmds fire.
+	pcall(require, "vim.snippet")
 end
 
 -- Mason 通过 `python3 -m venv` 创建虚拟环境安装 Python 包。
