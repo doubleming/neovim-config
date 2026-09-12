@@ -10,9 +10,7 @@ local function load_todo_comments()
 		{ src = "https://github.com/folke/todo-comments.nvim" }
 	})
 
-	local config = require("todo-comments.config")
-	config._options = { signs = false }
-	config._setup()
+	require("todo-comments").setup({ signs = false })
 
 	return require("todo-comments")
 end
@@ -36,22 +34,6 @@ end, {
 vim.api.nvim_create_user_command("TodoLocList", function(opts)
 	load_todo_comments()
 	require("todo-comments.search").setloclist(opts.args)
-end, {
-	desc = "Lazy-load todo-comments.nvim",
-	nargs = "*",
-})
-
-vim.api.nvim_create_user_command("TodoTelescope", function(opts)
-	load_todo_comments()
-	vim.cmd("Telescope todo-comments todo " .. opts.args)
-end, {
-	desc = "Lazy-load todo-comments.nvim",
-	nargs = "*",
-})
-
-vim.api.nvim_create_user_command("TodoFzfLua", function(_)
-	load_todo_comments()
-	require("todo-comments.fzf").todo()
 end, {
 	desc = "Lazy-load todo-comments.nvim",
 	nargs = "*",

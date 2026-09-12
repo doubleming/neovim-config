@@ -24,7 +24,7 @@ vim.keymap.set("v", "<space>x", ":lua<cr>", { desc = "Run selection" })
 -- tab
 vim.keymap.set("n", "L", "gt", { noremap = true, desc = "Go to next tab" })
 vim.keymap.set("n", "H", "gT", { noremap = true, desc = "Go to prev tab" })
-vim.keymap.set("n", "tc", ":tabClose<CR>", { noremap = true, desc = "close the tab" })
+vim.keymap.set("n", "tc", ":tabclose<CR>", { noremap = true, desc = "close the tab" })
 vim.keymap.set("n", "<C-w><C-t>", function()
     vim.cmd("tab split")
 end, { desc = "Open current buffer in new tab" })
@@ -144,6 +144,16 @@ end
 vim.keymap.set("n", "[e", function() jump_to_diagnostic("prev") end, { desc = "Previous error in loaded buffers" })
 vim.keymap.set("n", "]e", function() jump_to_diagnostic("next") end, { desc = "Next error in loaded buffers" })
 vim.keymap.set("n", "ge", vim.diagnostic.open_float, { desc = "Show diagnostic at cursor" })
+
+-- 诊断展示模式切换：虚拟文本 ↔ 虚拟行（长消息在行下方展开，两者互斥避免重叠）
+local diagnostic_line_mode = false
+vim.keymap.set("n", "<leader>tV", function()
+    diagnostic_line_mode = not diagnostic_line_mode
+    vim.diagnostic.config({
+        virtual_text = not diagnostic_line_mode,
+        virtual_lines = diagnostic_line_mode,
+    })
+end, { desc = "Toggle virtual lines diagnostics" })
 
 -- yazi
 vim.keymap.set("n", "<leader>-", "<cmd>Yazi<CR>", { desc = "Open yazi at current file" })

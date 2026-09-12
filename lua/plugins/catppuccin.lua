@@ -7,19 +7,12 @@ require("catppuccin").setup({
 	term_colors = true,
 	integrations = {
 		aerial = true,
-		diffview = true,
 		mini = {
 			enabled = true,
 			indentscope_color = "",
 		},
 		noice = true,
-		-- overseer = true,
-		telescope = {
-			enabled = true,
-			-- style = "nvchad",
-		},
 		treesitter = true,
-		notify = true,
 		gitsigns = true,
 		flash = true,
 		blink_cmp = true,

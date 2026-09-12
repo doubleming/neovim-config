@@ -95,8 +95,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(event)
 		local client = assert(vim.lsp.get_client_by_id(event.data.client_id))
 
+		-- tH 而非 th：th 已被 snacks 水平终端占用，buffer-local 键会全局键被遮蔽
 		if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
-			vim.keymap.set("n", "<leader>th", function()
+			vim.keymap.set("n", "<leader>tH", function()
 				vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
 			end, { buffer = event.buf, desc = "LSP: Toggle Inlay Hints" })
 		end

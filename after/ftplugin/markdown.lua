@@ -168,8 +168,8 @@ if not vim.g.marksman_lsp_enabled then
 	end)
 end
 
-vim.o.wrap = false
-vim.opt.conceallevel = 2
+vim.opt_local.wrap = false
+vim.opt_local.conceallevel = 2
 vim.keymap.set('n', 'gx', function()
   local line = vim.fn.getline '.'
   local cursor_col = vim.fn.col '.'

@@ -33,19 +33,10 @@ local function setup()
 			preset = {
 				keys = {
 					{ icon = "󰈞 ", key = "f", desc = "Find files", action = ":lua Snacks.picker.smart()" },
-					{ icon = " ", key = "o", desc = "Find history", action = "lua Snacks.picker.recent()" },
-					{ icon = " ", key = "e", desc = "New file", action = ":enew" },
-					{ icon = " ", key = "o", desc = "Recent files", action = ":lua Snacks.picker.recent()" },
-					{ icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
-					{
-						icon = "󰔛 ",
-						key = "P",
-						desc = "Lazy Profile",
-						action = ":Lazy profile",
-						enabled = package.loaded.lazy ~= nil,
-					},
-					{ icon = " ", key = "M", desc = "Mason", action = ":Mason", enabled = package.loaded.lazy ~= nil },
-					{ icon = " ", key = "q", desc = "Quit", action = ":qa" },
+					{ icon = " ", key = "o", desc = "Recent files", action = ":lua Snacks.picker.recent()" },
+					{ icon = " ", key = "e", desc = "New file", action = ":enew" },
+					{ icon = " ", key = "p", desc = "Plugins", action = ":Vpack" },
+					{ icon = " ", key = "q", desc = "Quit", action = ":qa" },
 				},
 				header = [[
 ░  ░░░░░░░░  ░░░░  ░░░      ░░░  ░░░░░░░
@@ -70,6 +61,13 @@ local function setup()
 			animate = { duration = { step = 10, duration = 100 } },
 			scope = { enabled = true, char = "┊", underline = false, only_current = true, priority = 1000 },
 		},
+		-- zen 默认联动 dim；bigfile 会把超大文件的 ft 置为 "bigfile"，
+		-- lsp/treesitter 里已有的 ft ~= "bigfile" 守卫因此生效
+		zen = {},
+		dim = {},
+		gitbrowse = {},
+		scratch = {},
+		bigfile = {},
 		styles = {
 			snacks_image = {
 				border = "rounded",
@@ -261,6 +259,22 @@ end), "Git blame line")
 map("<leader>K", with_snacks(function(snacks)
 	snacks.image.hover()
 end), "Display image in hover")
+
+map("<leader>tz", with_snacks(function(snacks)
+	snacks.zen()
+end), "Toggle zen mode")
+
+map("<leader>td", with_snacks(function(snacks)
+	snacks.dim()
+end), "Toggle dim")
+
+map("<leader>gu", with_snacks(function(snacks)
+	snacks.gitbrowse()
+end), "Browse git repo at cursor")
+
+map("<leader>S", with_snacks(function(snacks)
+	snacks.scratch()
+end), "Open scratch buffer")
 
 -- Terminal group (bottom panel, VS Code style)
 local term_group = {} ---@type snacks.terminal[]

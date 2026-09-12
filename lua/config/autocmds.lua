@@ -31,7 +31,7 @@ vim.filetype.add {
         ['.*'] = {
             function(path, buf)
                 if vim.bo[buf].filetype ~= 'bigfile' and path and vim.fn.getfsize(path) > vim.g.bigfile_size then
-                    vim.opt.cursorline = false
+                    vim.opt_local.cursorline = false
                     return 'bigfile'
                 else
                     return nil

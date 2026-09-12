@@ -114,7 +114,7 @@
 | `[f` | 跳转到当前函数的起始行 |
 | `]f` | 跳转到当前函数的结束行 |
 | `K` | LSP hover（同时支持时附带 actions） |
-| `<Space>th` | 切换 LSP inlay hints（仅当服务端支持 `textDocument/inlayHint`） |
+| `<Space>tH` | 切换 LSP inlay hints（仅当服务端支持 `textDocument/inlayHint`） |
 
 ---
 
@@ -123,6 +123,9 @@
 | 快捷键 | 作用 |
 | --- | --- |
 | `<Space>tc` | 切换 treesitter-context |
+| `]m` / `[m` | textobjects：下一个 / 上一个函数开头（rust、python 等有 parser 的语言） |
+| `]M` / `[M` | textobjects：下一个 / 上一个函数结尾 |
+| `<A-p>` / `<A-P>` | textobjects：当前参数与下一个 / 上一个参数交换位置 |
 | `s` | flash：跳转（normal/visual/operator-pending） |
 | `S` | flash：treesitter 跳转 |
 | `r` | flash：远端跳转（operator-pending） |
@@ -153,6 +156,7 @@
 | `ih` | operator/visual 文本对象：选中当前 hunk |
 | `<Space>gg` | 打开 lazygit（在 snacks git 根目录） |
 | `<Space>gb` | snacks：当前行 git blame |
+| `<Space>gu` | snacks：在浏览器打开光标处符号对应的远程仓库页面（带文件与行号） |
 | `<Space>tN` | snacks：通知历史 |
 | `<Space>n` | snacks：显示通知历史 |
 | `<Space>N` | snacks：隐藏通知历史 |
@@ -179,6 +183,9 @@
 > 终端组：F7 管理整个底部终端面板（类似 VS Code）。组内终端通过
 > `<Space>ts` / `<Space>tS` / `<C-w>s` / `<C-w>v` 追加；隐藏只关窗口、不杀进程，
 > 再次按 F7 原样恢复。原生 `:split | terminal` 仍可通过 Ex 命令手动使用。
+
+> `<Space>tH`（大写）是 LSP inlay hints 开关，见第 6 节；曾用 `<Space>th`，
+> 因与水平终端冲突已迁走。
 
 ---
 
@@ -267,7 +274,11 @@
 | `<A-l>` / `<A-h>` | 普通模式下当前行右缩进 / 左反缩进（带 count：`N<A-l>` 缩进 `N` 行） |
 | `<A-l>` / `<A-h>` | 可视模式下选区右缩进 / 左反缩进 |
 | `<Space>lf` | conform 格式化（normal / visual） |
+| `<Space>lr` | LSP 重命名，命令行输入时实时预览所有受影响位置（inc-rename） |
 | `<Space>u` | 切换 undotree |
+| `<Space>S` | 打开 snacks scratch 草稿缓冲区（同项目复用） |
+| `<Space>tz` | 切换 zen 写作模式（居中窄栏，默认联动 dim） |
+| `<Space>td` | 切换 snacks dim（弱化光标所在作用域外的内容） |
 | `<Space>K` | snacks：悬停显示图片 |
 | `<Space>P` | 从系统剪贴板粘贴图片（img-clip） |
 | `<Space>oa` | opencode 询问 `@buffer`（normal）或 `@this` 选区（visual） |
@@ -283,6 +294,7 @@
 | `[e` | 跳到上一个已加载缓冲区的 ERROR 诊断 |
 | `]e` | 跳到下一个已加载缓冲区的 ERROR 诊断 |
 | `ge` | 在光标位置弹出诊断浮窗 |
+| `<Space>tV` | 切换诊断展示模式：虚拟文本 ↔ 虚拟行（长消息在行下方展开） |
 | `[q` | quickfix 上一项 |
 | `]q` | quickfix 下一项 |
 | `[l` | location list 上一项 |

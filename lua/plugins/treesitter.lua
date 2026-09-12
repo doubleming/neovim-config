@@ -12,13 +12,14 @@ vim.api.nvim_create_autocmd({ 'BufReadPre', 'BufNewFile' }, {
 
         require('nvim-treesitter').install { 'rust', 'javascript', 'diff', 'snakemake', 'python', 'toml', 'vue', 'html', 'typescript', 'css' }
 
-        -- mini.comment 需要 treesitter 真正 attach 到 buffer（带 range 的解析），
-        -- 才会生成注入的 script/style 子语言树，从而在 Vue 里按区域用对注释符。
-        -- nvim-treesitter 的 Highlighting 等特性默认不会自动启用，需显式 start。
+        -- nvim-treesitter 主分支不会自动启用高亮，需按 FileType 显式 start。
+        -- 没有 parser 的文件类型（含 ft=bigfile）由 pcall 静默跳过，回落到 legacy syntax；
+        -- Vue 里 mini.comment 依赖 TS attach 才能对注入的 script/style 用对注释符，
+        -- 这里一并覆盖。
         vim.api.nvim_create_autocmd('FileType', {
-            pattern = { 'vue' },
-            callback = function()
-                pcall(vim.treesitter.start)
+            group = vim.api.nvim_create_augroup("StartTreesitterHighlight", { clear = true }),
+            callback = function(ev)
+                pcall(vim.treesitter.start, ev.buf)
             end,
         })
 
