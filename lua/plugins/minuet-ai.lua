@@ -23,7 +23,7 @@ require("minuet").setup({
 	},
 	provider_options = {
 		openai_compatible = {
-			api_key = "MINMAX_TOKEN_PLAN_API_KEY",
+			api_key = "MINIMAX_API_KEY",
 			end_point = "https://api.minimaxi.com/v1/chat/completions",
 			model = "MiniMax-M3",
 			name = "MiniMax",

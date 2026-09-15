@@ -14,7 +14,7 @@ local function setup()
 
 	local snacks = require("snacks")
 	snacks.setup({
-		notifier = {},
+		notifier = { level = vim.log.levels.WARN },
 		input = {},
 		picker = {
 			ui_select = true,
@@ -34,7 +34,7 @@ local function setup()
 				keys = {
 					{ icon = "󰈞 ", key = "f", desc = "Find files", action = ":lua Snacks.picker.smart()" },
 					{ icon = " ", key = "o", desc = "Recent files", action = ":lua Snacks.picker.recent()" },
-					{ icon = " ", key = "e", desc = "New file", action = ":enew" },
+					{ icon = " ", key = "n", desc = "New file", action = ":enew" },
 					{ icon = " ", key = "p", desc = "Plugins", action = ":Vpack" },
 					{ icon = " ", key = "q", desc = "Quit", action = ":qa" },
 				},
