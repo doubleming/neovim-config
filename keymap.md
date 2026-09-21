@@ -400,7 +400,18 @@
 
 ---
 
-## 24. 包围编辑（mini.surround，`lua/plugins/mini.lua:90`）
+## 24. 注释切换（mini.comment，`lua/plugins/mini.lua:34`）
+
+| 快捷键 | 作用 |
+| --- | --- |
+| `gcc` | 切换当前行注释 |
+| `gc{motion}` | 切换 motion 覆盖范围的注释（如 `gcip` 注释整段、`gc$` 注释到行尾） |
+| `gc`（可视模式） | 切换选区注释 |
+| `gc`（textobject） | 文本对象；`dgc` 删除整个注释块，`v gc` 选中注释块 |
+
+---
+
+## 25. 包围编辑（mini.surround，`lua/plugins/mini.lua:90`）
 
 格式：**`sa[motion][id]`** —— motion 必填（`iw` / `aw` / `iW` / `i"` / `ip` …），id 是单字符包围符。
 
