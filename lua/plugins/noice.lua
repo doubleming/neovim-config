@@ -6,6 +6,20 @@ require("noice").setup({
   notify = {
     enabled = false,
   },
+  -- inputlist()/confirm() 的选择提示必须走 confirm 弹窗。
+  -- long_message_to_split 预设把 min_height >= 20 的 msg_show 丢进底部 split
+  -- （view = cmdline_output，format = "details"），代码动作一多就会显示成
+  -- "msg_show.confirm Code actions:" 这种只读消息，无法选择。用户 routes
+  -- 排在预设之前，因此在这里抢回优先级。
+  routes = {
+    {
+      filter = {
+        event = "msg_show",
+        kind = { "confirm", "confirm_sub", "number_prompt" },
+      },
+      view = "confirm",
+    },
+  },
   lsp = {
     -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
     override = {

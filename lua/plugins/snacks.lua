@@ -18,6 +18,24 @@ local function setup()
 		input = {},
 		picker = {
 			ui_select = true,
+			sources = {
+				select = {
+					-- vim.ui.select 按 kind 定制布局：LSP 代码动作贴近光标弹出
+					kinds = {
+						codeaction = {
+							layout = {
+								preset = "select",
+								-- relative 属于 layout box 本身，写在 picker.layout 顶层会被忽略
+								layout = {
+									relative = "cursor",
+									row = 1,
+									col = 0,
+								},
+							},
+						},
+					},
+				},
+			},
 			matcher = { frecency = true, cwd_bonus = true, history_bonus = true },
 			formatters = { icon_width = 3 },
 			win = {
@@ -80,6 +98,35 @@ local function setup()
 end
 
 M.load = setup
+
+-- vim.ui.select 懒加载代理。
+-- picker.ui_select = true 只在 snacks 真正 setup 后才接管 vim.ui.select，
+-- 而 snacks 是懒加载的：首次触发前，vim.lsp.buf.code_action() 等调用会退回
+-- Neovim 默认的 inputlist()，在命令行区显示 "Code actions:" 让你手敲序号。
+-- 这里在启动期装一个零成本代理：真正被调用时才加载 snacks，再转交 picker 版实现。
+-- setup() 一旦跑过，vim.ui.select 就被换成 Snacks.picker.select，代理自动退出链路。
+do
+	local fallback = vim.ui.select
+	---@type fun(items: any[], opts?: vim.ui.select.Opts, on_choice: fun(item?: any, idx?: number))
+	local proxy
+	proxy = function(items, opts, on_choice)
+		-- 推后一个 loop tick 再加载 + 开 picker：snacks 开窗需要正常上下文，
+		-- 在 fast event（InsertCharPre 等）里直接开窗口会报 E565
+		vim.schedule(function()
+			local ok, mod = pcall(require, "plugins.snacks")
+			if ok and type(mod.load) == "function" then
+				pcall(mod.load)
+			end
+			local select = vim.ui.select
+			if select ~= proxy and select ~= fallback then
+				return select(items, opts, on_choice)
+			end
+			-- 加载失败时退回原实现，至少不吞掉选择
+			return fallback(items, opts, on_choice)
+		end)
+	end
+	vim.ui.select = proxy
+end
 
 local function map(key, func, desc)
 	vim.keymap.set("n", key, func, { desc = desc })
