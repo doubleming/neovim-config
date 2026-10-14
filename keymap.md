@@ -446,3 +446,21 @@
 > **可视模式：** 先 `v` 选中 → `sa{` 直接包围选区（无需 motion）。
 >
 > **提示：** 按 `sa` 后 **1 秒** 不按 id 会提示 "Reminder to press output surrounding id"，正常连按即可。需关掉加 `silent = true`。
+
+---
+
+## 26. 补全 / 片段（blink.cmp，`lua/plugins/completion.lua`）
+
+| 快捷键 | 作用 |
+| --- | --- |
+| `<M-s>` | 只列 snippets 的补全菜单（插自定义片段用这个） |
+| `<C-space>` | 显示补全菜单（snippets `score_offset = 1000`，片段排最前） |
+| `<C-y>` | 接受当前选中项（`default` 预设没把 `<CR>` 绑到 accept，回车是换行） |
+| `<C-e>` | 关闭菜单 / 取消 |
+| `<Up>` `<Down>` / `<C-p>` `<C-n>` | 上下选择 |
+| `<Tab>` / `<S-Tab>` | 片段内下一个 / 上一个占位符（菜单未弹出时退回普通 Tab） |
+| `<M-u>` / `<M-d>` | 向上 / 向下滚动文档（等同 `<C-b>` / `<C-f>`） |
+
+> **示例**（`snippets/vue.json` 的 `vue3-ts-setup-init`）：在 `.vue` 文件里 `<M-s>` → `<C-y>` 接受 → `<Tab>` 从文件名预填的 `name` 跳到 `<div>` 内容处。
+> `name` 由 blink 的 `${TM_FILENAME_BASE}` 展开（当前文件名去扩展名）；未保存的新 buffer 文件名为空，需手填。
+> 片段按 `vim.bo.filetype` 取，所以 `vue.json` 只对 `filetype = vue` 生效，`.html` 里看不到。

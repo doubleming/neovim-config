@@ -1,0 +1,17 @@
+{
+  "v3-ts": {
+    "prefix": "vue3-ts-setup-init",
+    "description": "Vue 3 <script setup> + TS 骨架；name 默认取当前文件名（不含扩展名），kebab-case 文件名需自己改成 PascalCase",
+    "body": [
+      "<script lang=\"ts\" setup>",
+      "defineOptions({",
+      "  name: '${1:${TM_FILENAME_BASE}}'",
+      "})",
+      "</script>",
+      "",
+      "<template>",
+      "  <div>${2}</div>",
+      "</template>"
+    ]
+  }
+}

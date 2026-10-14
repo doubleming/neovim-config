@@ -26,6 +26,8 @@ vim.api.nvim_create_autocmd({ "InsertEnter", "CmdlineEnter" }, {
                 },
             },
             keymap = {
+                -- 只列 snippets 的补全菜单（配合 snippets 目录里的自定义片段）
+                ["<M-s>"] = { function(cmp) cmp.show({ providers = { "snippets" } }) end },
                 ["<M-u>"] = { "scroll_documentation_up", "fallback" },
                 ["<M-d>"] = { "scroll_documentation_down", "fallback" },
             },
