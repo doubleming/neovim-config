@@ -21,10 +21,10 @@ require('neo-tree').setup({
 		winbar = false,
 		statusline = false,
 		sources = {
-            { source = "filesystem", display_name = "   Files  " },
-            { source = "buffers",    display_name = "   Buffers  " },
-            { source = "git_status", display_name = "   Git  " },
-        },
+			{ source = "filesystem", display_name = "   Files  " },
+			{ source = "buffers", display_name = "   Buffers  " },
+			{ source = "git_status", display_name = "   Git  " },
+		},
 	},
 	commands = {
 		find_files_in_dir = function(state)
@@ -50,7 +50,7 @@ require('neo-tree').setup({
 	},
 	filesystem = {
 		follow_current_file = { enabled = true },
-        hijack_netrw_behavior = "open_current",
+		hijack_netrw_behavior = "open_current",
 		window = {
 			mappings = {
 				["l"] = "toggle_node",
@@ -61,15 +61,33 @@ require('neo-tree').setup({
 				fF = "find_all_files_in_dir",
 				fw = vim.fn.executable "rg" == 1 and "find_words_in_dir" or nil,
 				fW = vim.fn.executable "rg" == 1 and "find_all_words_in_dir" or nil,
+				["O"] = function(state)
+					local node = state.tree:get_node()
+					local path = node:get_id()
+					-- 如果是文件，先打开其所在目录并选中；如果是目录则直接打开
+					if node.type == "file" then
+						-- 用系统管理器打开并选中该文件（macOS 用 -R，Linux 用 xdg-open 打开目录）
+						local sysname = vim.uv.os_uname().sysname
+						if sysname == "Darwin" then
+							vim.fn.system({ "open", "-R", path }) -- Finder 中显示并选中
+						elseif sysname == "Windows_NT" then
+							vim.fn.system({ "explorer.exe", "/select,", path }) -- 资源管理器中选中
+						else
+							vim.ui.open(vim.fs.dirname(path)) -- xdg-open 打开所在目录
+						end
+					else
+						vim.ui.open(path)
+					end
+				end,
 			},
 		},
 	},
-    buffers = {
-        follow_current_file = { enabled = true },
-    },
-    git_status = {
-        window = { position = "float" },
-    },
+	buffers = {
+		follow_current_file = { enabled = true },
+	},
+	git_status = {
+		window = { position = "float" },
+	},
 	-- options go here
 	default_component_configs = {
 		icon = {
